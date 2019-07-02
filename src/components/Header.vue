@@ -290,14 +290,14 @@ export default {
 .header__logo {
     position: relative;
 
-    display: none;
+    display: block;
 
     width: 100%;
     height: 100%;
 
     @include icon('../assets/images/logo.png');
-    background-size: 20px 29px;
-    background-position: 20px center;
+    background-size: 70%;
+    background-position: 20% center;
 }
 
 .header__dark {
