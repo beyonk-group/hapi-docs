@@ -108,7 +108,7 @@ const startServer = async () => {
         method: 'GET',
         path: '/',
         handler(request, h) {
-            return h.redirect('/docs')
+            return h.redirect('/docs/')
         }
     })
 

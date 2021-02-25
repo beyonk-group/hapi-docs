@@ -23,21 +23,21 @@
     ],
     "dependencies": {
         "@hapi/hoek": "^9.0.4",
-        "axios": "^0.19.2",
         "esm": "^3.2.25",
         "joi": "^17.2.0",
         "js-cookie": "^2.2.1",
         "marked": "^0.8.2",
+        "node-fetch": "^2.6.1",
         "prismjs": "^1.15.0",
         "vue": "^2.6.12",
         "vue-prism-component": "^1.2.0",
         "vuex": "^3.5.1"
     },
     "peerDependencies": {
-        "@hapi/hapi": ">=19"
+        "@hapi/hapi": "^20.1.0"
     },
     "devDependencies": {
-        "@hapi/hapi": "^19.2.0",
+        "@hapi/hapi": "20.1.0",
         "@hapi/inert": "^6.0.2",
         "@vue/cli-plugin-babel": "^4.5.4",
         "@vue/cli-plugin-eslint": "^4.5.4",

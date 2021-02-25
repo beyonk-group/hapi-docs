@@ -1,4 +1,4 @@
-import axios from 'axios'
+import fetch from 'node-fetch'
 import * as types from '../mutation-types'
 
 export const state = {
@@ -75,7 +75,8 @@ export const mutations = {
 
 export const actions = {
     async fetchData({ commit }) {
-        const { data } = await axios.get('/hapi-docs')
+        const res = await fetch('/hapi-docs')
+        const data = await res.json()
 
         commit(types.FETCH_DATA, { data })
     }
