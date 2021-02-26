@@ -12,6 +12,7 @@
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
+        "dev": "run-p start serve",
         "start": "nodemon examples/server.js -x \"node -r esm\"",
         "prepublishOnly": "yarn build",
         "heroku-postbuild": "yarn build"
@@ -52,6 +53,7 @@
         "eslint-plugin-vue": "^6.2.2",
         "node-sass": "^4.14.1",
         "nodemon": "^2.0.4",
+        "npm-run-all": "^4.1.5",
         "sass-loader": "^9.0.3",
         "svg-url-loader": "^6.0.0",
         "vue-template-compiler": "^2.6.11",
