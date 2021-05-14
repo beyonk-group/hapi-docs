@@ -146,7 +146,11 @@ const startServer = async () => {
                         id: Joi.string()
                             .required()
                             .description('The identifier of the customer to be retrieved.')
-                    })
+                    }),
+                    query: Joi.object().pattern(
+                        Joi.string().required().description('Ticket name'),
+                        Joi.number().integer().required().min(1).description('Ticket quantity')
+                    ).min(1).required().description('Tickets requested')
                 },
                 plugins: {
                     'hapi-docs': {
