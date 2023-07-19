@@ -13,8 +13,8 @@
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
         "start": "nodemon examples/server.js",
-        "prepublishOnly": "yarn build",
-        "heroku-postbuild": "yarn build"
+        "prepublishOnly": "pnpm build",
+        "heroku-postbuild": "pnpm build"
     },
     "main": "lib/index.js",
     "files": [
