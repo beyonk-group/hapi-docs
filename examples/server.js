@@ -39,9 +39,6 @@ async function initServer() {
         options: pluginOptions
     })
 
-<<<<<<< HEAD
-    return server
-=======
     server.route([
         {
             method: 'POST',
@@ -377,7 +374,6 @@ async function initServer() {
 
     // eslint-disable-next-line
     console.log(`${name} (v.${version}) server listening on ${server.info.uri}`)
->>>>>>> 73a0e9b (allow pattern queries)
 }
 
 // eslint-disable-next-line
