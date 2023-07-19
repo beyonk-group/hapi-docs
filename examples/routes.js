@@ -33,7 +33,15 @@ export default [
                     id: Joi.string()
                         .required()
                         .description('The identifier of the customer to be retrieved.')
-                })
+                }),
+                query: Joi.object()
+                    .pattern(
+                        Joi.string().required().description('Ticket name'),
+                        Joi.number().integer().required().min(1).description('Ticket quantity')
+                    )
+                    .min(1)
+                    .required()
+                    .description('Tickets requested')
             },
             plugins: {
                 'hapi-docs': {
@@ -219,17 +227,9 @@ export default [
         options: {
             description: 'Create a recipient',
             notes: [
-                'Creates a new `Recipient` object and verifies the recipient’s identity. Also verifies the recipient’s bank account information or debit card, if either is provided.'
+                'Creates a new `Recipient`. object and verifies the recipient’s identity. Also verifies the recipient’s bank account information or debit card, if either is provided.'
             ],
             tags: ['api'],
-            validate: {
-                query: Joi.object({
-                    type: Joi.string()
-                        .valid('bank', 'card')
-                        .required()
-                        .description('Type of the recipient’s payment method.')
-                })
-            },
             plugins: {
                 'hapi-docs': {
                     order: 1
